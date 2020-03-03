@@ -11,7 +11,9 @@ public class _Function {
 		System.out.println(myFunction.apply(3));
 //		after incrementing we want to apply the other
 		int x =  multiplyBy10.apply(myFunction.apply(3));
-		System.out.println(x);
+		System.out.println("mit doppelt apply" +x);
+		
+		
 		
 //		combine the two functions. This is better::
 		
