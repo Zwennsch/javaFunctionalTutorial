@@ -1,5 +1,6 @@
 package functionalinterface;
 
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 public class MyPredicate {
@@ -17,6 +18,10 @@ public class MyPredicate {
 		System.out.println(phoneNr.and(containsNr).test("08000000000"));
 //		with or instead of and
 		System.out.println(phoneNr.or(containsNr).test("07000000000"));
+//		test BiPredicate
+		System.out.println("BiPredicate");
+		System.out.println(isOfLenght.test("hallo", 5));
+		System.out.println(isOfLenght.test("hallo", 6));
 	}
 	
 	static boolean isPhoneNumberValid(String number) {
@@ -27,5 +32,7 @@ public class MyPredicate {
 	static Predicate<String> phoneNr = nr -> nr.startsWith("07")&& nr.length()==11;
 	
 	static Predicate<String> containsNr = number -> number.contains("09");
+	
+	static BiPredicate<String, Integer> isOfLenght  = (word, number) -> word.length() == number;
 
 }
