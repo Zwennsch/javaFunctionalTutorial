@@ -14,7 +14,7 @@ public class _Function {
 		System.out.println("mit doppelt apply" +x);
 		
 		
-		
+			
 //		combine the two functions. This is better::
 		
 		int y = myFunction.andThen(multiplyBy10).apply(6);
